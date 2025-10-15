@@ -1,88 +1,25 @@
 # MkDocs ドキュメントサイト
 
-認証・認可に関する技術ドキュメントをMkDocsで提供するプロジェクトです。
+Webアプリケーション開発に関する技術ドキュメントをMkDocsで提供するプロジェクトです。
 
-## セットアップ（Dev Container）
+現在は認証・認可に関するドキュメントを中心に提供しており、今後はWebアプリケーション開発全般に関するコンテンツを拡充していく予定です。
 
-### 必要な環境
-
-- Docker Desktop
-- Visual Studio Code
-- Dev Containers 拡張機能
-
-### 起動手順
-
-1. リポジトリをクローン
-
-   ```bash
-   git clone git@github.com:ry-miyamoto-sts/mkdocs.git
-   cd mkdocs
-   ```
-
-2. VS Code で開く
-
-   ```bash
-   code .
-   ```
-
-3. コマンドパレット（`Ctrl+Shift+P` または `Cmd+Shift+P`）を開き、
-   `Dev Containers: Reopen in Container` を選択
-
-4. コンテナ起動後、ターミナルで以下を実行
-
-   ```bash
-   cd docs
-   mkdocs serve -a 0.0.0.0:8000
-   ```
-
-5. ブラウザで `http://localhost:8000/` にアクセス
-
-## ローカル環境での起動（Dev Container不使用）
-
-```bash
-cd docs
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-mkdocs serve
-```
-
-ブラウザで `http://127.0.0.1:8000/` にアクセスしてください。
-
-## GitHub Pagesへのデプロイ
-
-このプロジェクトはGitHub Actionsを使って自動的にGitHub Pagesにデプロイされます。
-
-### 公開URL
+## 公開URL
 
 - **ドキュメントサイト**: <https://ry-miyamoto-sts.github.io/mkdocs/>
 
-### デプロイ方法
+## コンテンツ
 
-1. `main` ブランチにプッシュすると自動的にデプロイされます
-2. 手動でデプロイする場合:
-   - GitHubリポジトリの「Actions」タブを開く
-   - 「Deploy MkDocs to GitHub Pages」ワークフローを選択
-   - 「Run workflow」ボタンをクリック
+- 認証の基礎
+- OAuth/OIDC基礎
+- 認証ガイド
+- 実装ガイド
+- セキュリティプラクティス
 
-### 初回セットアップ（リポジトリ管理者のみ）
+## 開発に参加する
 
-1. GitHubリポジトリの「Settings」→「Pages」を開く
-2. 「Source」で「Deploy from a branch」を選択
-3. 「Branch」で `gh-pages` ブランチと `/ (root)` を選択
-4. 「Save」をクリック
+プロジェクトへの貢献を検討されている方は、[CONTRIBUTING.md](CONTRIBUTING.md) をご覧ください。開発環境のセットアップ方法やデプロイ手順について詳しく説明しています。
 
-※ 初回のGitHub Actionsワークフロー実行後、`gh-pages` ブランチが自動作成されます。
+## ライセンス
 
-## プロジェクト構成
-
-```text
-docs/
-├── mkdocs.yml          # MkDocs設定ファイル
-├── requirements.txt    # Python依存パッケージ
-└── src/               # ドキュメントソース
-    ├── index.md
-    ├── auth-basics.md
-    ├── oauth-oidc-basics.md
-    └── ...
-```
+このプロジェクトは、MITライセンスのもとで公開されています。
