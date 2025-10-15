@@ -23,12 +23,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd docs
-          pip install -r requirements.txt
+          pip install -r docs/requirements.txt
 
       - name: Build and Deploy
         run: |
-          cd docs
-          mkdocs gh-deploy --force
+          mkdocs gh-deploy --config-file docs/mkdocs.yml --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -3,6 +3,7 @@ site_url: https://ry-miyamoto-sts.github.io/mkdocs/
 repo_name: ry-miyamoto-sts/mkdocs
 repo_url: https://github.com/ry-miyamoto-sts/mkdocs
 docs_dir: src
+site_dir: ../site
 theme:
   name: material
   language: ja
