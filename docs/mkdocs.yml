@@ -1,7 +1,7 @@
 site_name: 汎用ドキュメント置き場
-# site_url: https://sts-cloud-app.github.io/infomart-new-admin-docs/
-# repo_name: sts-cloud-app/infomart-new-admin-docs
-# repo_url: https://github.com/sts-cloud-app/infomart-new-admin-docs
+site_url: https://ry-miyamoto-sts.github.io/mkdocs/
+repo_name: ry-miyamoto-sts/mkdocs
+repo_url: https://github.com/ry-miyamoto-sts/mkdocs
 docs_dir: src
 theme:
   name: material
